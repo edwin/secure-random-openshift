@@ -29,7 +29,7 @@ public class IndexController {
         SecureRandom secureRandom = new SecureRandom();
         secureRandom.setSeed(secureRandom.generateSeed(24));
         return new HashMap(){{
-            put("random-value", secureRandom.nextInt(1000000));
+            put("random-value", String.format("%06d", secureRandom.nextInt(1000000)));
         }};
     }
 
@@ -38,7 +38,7 @@ public class IndexController {
         SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
         secureRandom.setSeed(secureRandom.generateSeed(24));
         return new HashMap(){{
-            put("random-value", secureRandom.nextInt(1000000));
+            put("random-value", String.format("%06d", secureRandom.nextInt(1000000)));
         }};
     }
 }
