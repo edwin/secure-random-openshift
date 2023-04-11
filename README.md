@@ -4,11 +4,11 @@
 A regular `SecureRandom secureRandom = new SecureRandom();` 
 ```
 $ curl -k http://localhost:8080/secure-random
-{"random-value":582955}                                                                         
+{"random-value":"003367"}                                                                    
 ```
 
 SecureRandom using `SecureRandom.getInstance("SHA1PRNG");`
 ```
 $ curl -k http://localhost:8080/secure-random-new
-{"random-value":997607}                                                                     
+{"random-value":"022485"}                                                                    
 ```
